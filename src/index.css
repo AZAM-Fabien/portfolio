@@ -1,0 +1,12 @@
+:root {
+    position: relative;
+    height: 100vh;
+    margin: 0px;
+    box-sizing: border-box;
+    border: 8px solid black;
+    border-bottom: 0px;
+}
+
+body {
+    margin: 0px;
+}
