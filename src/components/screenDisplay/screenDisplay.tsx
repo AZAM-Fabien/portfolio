@@ -6,9 +6,9 @@ const ScreenDisplay = () => {
     <S.ScreenDisplay>
       <S.Text>MSI</S.Text>
       <S.LedContainer>
-        <Led delay={3.75} />
-        <Led delay={2.5} />
-        <Led delay={1.25} />
+        <Led delay={3} />
+        <Led delay={2} />
+        <Led delay={1} />
         <Led delay={0} />
       </S.LedContainer>
     </S.ScreenDisplay>

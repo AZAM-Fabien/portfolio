@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { store } from "./store/redux.jsx";
 import Footer from "./components/footer/footer.tsx";
 import Home from "./pages/Home/Home.js";
-import ScreenDisplay from "./components/screenDisplay/screenDisplay.tsx";
+
 
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
           <Footer />
-          <ScreenDisplay />
         </Router>
       {/* </Provider> */}
     </>

@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 
 export const ScreenDisplay = styled.div`
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +12,7 @@ export const ScreenDisplay = styled.div`
 
 export const Text = styled.div`
   padding-top: 4px;
-  font-size: 2vw;
+  font-size: min(4vw, 20px);
   color: silver
 `;
 
