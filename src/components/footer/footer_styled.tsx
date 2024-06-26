@@ -11,22 +11,8 @@ export const ContainerMenu = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #f00a0a;
-`;
+  background-color: #415b80;
+  height: 40px;
 
-export const MeteoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Menu = styled.div`
-`;
-
-export const Date = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
 `;
