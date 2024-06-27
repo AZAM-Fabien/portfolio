@@ -13,7 +13,8 @@ export const ScreenDisplay = styled.div`
 export const Text = styled.div`
   padding-top: 4px;
   font-size: min(4vw, 20px);
-  color: silver
+  color: silver;
+  
 `;
 
 export const LedContainer = styled.div`

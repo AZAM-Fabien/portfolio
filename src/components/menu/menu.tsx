@@ -13,6 +13,11 @@ const Menu: React.FC = () => {
 
   const handleIconClick = (iconName: string) => {
     dispatch(setActiveIcon(iconName));
+     if (iconName === "github") {
+    setTimeout(() => {
+      window.open('https://github.com/AZAM-Fabien?tab=repositories', '_blank');
+    }, 580);
+  }
   };
 
   return (
