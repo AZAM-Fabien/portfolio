@@ -11,7 +11,7 @@ export const ContainerMenu = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #415b80;
+  background-color: ${({ theme }) => theme.backgroundDark2};
   height: 40px;
 
   

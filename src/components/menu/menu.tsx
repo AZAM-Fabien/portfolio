@@ -6,6 +6,7 @@ import { setActiveIcon } from "../../redux/iconSlice";
 import * as S from "./menu_style";
 import Icon from "../icon/icon";
 import Bubble from "../bubble/bubble";
+import { openSettings } from "../../redux/SettingsSlice";
 
 const Menu: React.FC = () => {
   const dispatch = useDispatch();
@@ -13,11 +14,20 @@ const Menu: React.FC = () => {
 
   const handleIconClick = (iconName: string) => {
     dispatch(setActiveIcon(iconName));
-     if (iconName === "github") {
-    setTimeout(() => {
-      window.open('https://github.com/AZAM-Fabien?tab=repositories', '_blank');
-    }, 580);
-  }
+    if (iconName === "github") {
+      setTimeout(() => {
+        window.open(
+          "https://github.com/AZAM-Fabien?tab=repositories",
+          "_blank"
+        );
+      }, 580);
+    }
+
+    if (iconName === "settings") {
+      setTimeout(() => {
+        dispatch(openSettings());
+      }, 580);
+    }
   };
 
   return (

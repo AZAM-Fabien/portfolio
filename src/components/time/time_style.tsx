@@ -10,4 +10,5 @@ export const TimeContainer = styled.div`
 export const Text = styled.p`
   margin: 0;
   font-size: 14px;
+  color: ${({ theme }) => theme.textDark};
 `

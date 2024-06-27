@@ -14,8 +14,12 @@ const iconSlice = createSlice({
     setActiveIcon(state, action: PayloadAction<string>) {
       state.activeIcon = action.payload;
     },
+
+    resetActiveIcon(state) {
+      state.activeIcon = "";
+    },
   },
 });
 
-export const { setActiveIcon } = iconSlice.actions;
+export const { setActiveIcon, resetActiveIcon } = iconSlice.actions;
 export default iconSlice.reducer;

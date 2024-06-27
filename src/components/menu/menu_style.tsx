@@ -5,7 +5,7 @@ export const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d7ff0f;
+  background-color: ${({ theme }) => theme.itemDark};
   width: 200px;
   height: 80%;
   border-radius: 10px;
