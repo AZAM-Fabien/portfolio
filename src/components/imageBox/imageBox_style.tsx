@@ -5,6 +5,7 @@ export const ImageBox = styled.img`
     width: 100%;
     max-height: 100%;
     object-fit: cover;
+    object-position: left;
 
   &:hover {
     cursor: pointer;

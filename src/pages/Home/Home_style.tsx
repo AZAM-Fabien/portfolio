@@ -22,7 +22,7 @@ export const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 60px;
   gap: 20px;
   width: 60px;
   height: 100%;

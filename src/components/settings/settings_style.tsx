@@ -56,7 +56,7 @@ export const ImageMainContainer = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
-  gap: 2vw;
+  gap: 3vw;
 `;
 
 export const ImageContainer1 = styled.div`
@@ -67,6 +67,12 @@ export const ImageContainer1 = styled.div`
   padding-left: 3vw;
   padding-right: 3vw;
   box-sizing: border-box;
+
+  @media (max-width: 612px) {
+    flex-direction: column;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
 `;
 
 export const ImageContainer2 = styled.div`
@@ -77,16 +83,24 @@ export const ImageContainer2 = styled.div`
   padding-left: 3vw;
   padding-right: 3vw;
   box-sizing: border-box;
+
+  @media (max-width: 612px) {
+    flex-direction: column;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
 `;
 
 export const BoxImage = styled.div`
   width: 100%;
   height: 40vw;
-  max-height: 100% ;
-  max-width: 100% ;
+  max-height: 100%;
+  max-width: 100%;
   box-sizing: border-box;
-  object-fit: contain;
-  display: flex;  
+  display: flex;
   justify-content: center;
-  align-items: center;
+
+  @media (max-width: 612px) {
+    height: auto;
+  }
 `;
