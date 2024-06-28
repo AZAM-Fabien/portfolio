@@ -6,8 +6,10 @@ import { blueTheme, greyTheme, redTheme } from "../../theme/theme";
 
 interface ColorProps {
     color: string;
+    color2: string;
   }
-const ColorsBox: React.FC<ColorProps> = ({ color }) => {
+
+const ColorsBox: React.FC<ColorProps> = ({ color, color2}) => {
 
     const dispatch = useDispatch();
 
@@ -21,7 +23,7 @@ const ColorsBox: React.FC<ColorProps> = ({ color }) => {
         }
     };
 
-    return <S.ColorsBox colors={color} onClick={handleClick}/>;
+    return <S.ColorsBox $colors={color} $colors2={color2} onClick={handleClick}/>;
 };
 
 export default ColorsBox;

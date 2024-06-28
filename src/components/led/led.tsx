@@ -5,7 +5,7 @@ interface LedProps {
 }
 
 const Led: React.FC<LedProps> = ({ delay }) => {
-  return <S.Led delay={delay} />;
+  return <S.Led $delay={delay} />;
 };
 
 export default Led;

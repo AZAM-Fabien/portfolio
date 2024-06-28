@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Wellfleet&display=swap');
+
 body {
     margin: 0px;
 }
@@ -9,4 +11,12 @@ body {
     box-sizing: border-box;
     border: 8px solid black;
     border-bottom: 0px;
+}
+
+h1, h2 {
+    font-family: 'DotGothic16', sans-serif;
+}
+
+h3, h4, h5, p {
+    font-family: wellfleet, monospace;
 }

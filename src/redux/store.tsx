@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import iconReducer from './iconSlice';
+import iconReducer from "./iconSlice";
 import homeSlice from "./homeSlice";
-import SettingsSlice from "./SettingsSlice";
+import openSlice from "./openSlice";
 import colorThemeSlice from "./colorThemeSlice";
 
 export const store = configureStore({
   reducer: {
     icon: iconReducer,
     image: homeSlice,
-    settings: SettingsSlice,
+    open: openSlice,
     theme: colorThemeSlice,
   },
 });

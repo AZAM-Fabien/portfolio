@@ -23,11 +23,11 @@ const waveAnimation = keyframes`
   }
 `;
 
-export const Led = styled.div<{ delay: number }>`
+export const Led = styled.div<{ $delay: number }>`
   width: 15vw;
   height: 4px;
   background: linear-gradient(90deg, ${generateGradient()});
   background-size: 24000%;
   animation: ${waveAnimation} 8s infinite linear;
-  animation-delay: ${props => props.delay}s;
+  animation-delay: ${props => props.$delay}s;
 `;

@@ -2,52 +2,33 @@ import styled from "styled-components";
 
 export const Settings = styled.div`
   position: absolute;
-  background-color: white;
+  background-color: ${({ theme }) => theme.backgroundLight2};
   width: 100%;
   height: 100%;
-`;
-
-export const TopContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid black;
-  height: 20px;
-  background-color: ${({ theme }) => theme.activeItemLight};;
+  overflow: auto;
+  z-index: 1000;
 `;
 
 export const TextH2 = styled.h2`
   margin: 0;
   margin-left: 1rem;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 20px;
   color: ${({ theme }) => theme.textLight};
-`;
-
-export const CloseButton = styled.button`
-color: ${({ theme }) => theme.textLight};
-background-color: ${({ theme }) => theme.itemLight};
-border: none;
-height: 100%;
-
-&:hover {
-  cursor: pointer;
-  background-color: ${({ theme }) => theme.itemLight2};
-}
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100% - 22px);
-  z-index: 1000;
-  overflow-y: auto;
+  gap: 4vw;
 `;
 
 export const ColorsMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2vw;
 `;
 
 export const ColorsContainer = styled.div`
@@ -55,39 +36,57 @@ export const ColorsContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  box-sizing: border-box;
   height: 100%;
-  border: 1px solid black;
+  gap: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 `;
 
 export const ImageMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2vw;
 `;
 
 export const ImageMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   height: 100%;
-  border: 1px solid black;
+  width: 100%;
+  gap: 2vw;
 `;
 
 export const ImageContainer1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
+  gap: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  box-sizing: border-box;
 `;
 
-export const ImageContainer2 = styled.div`  
+export const ImageContainer2 = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  box-sizing: border-box;
+`;
+
+export const BoxImage = styled.div`
   width: 100%;
-  height: 100%;
-  border: 1px solid black;
+  height: 40vw;
+  max-height: 100% ;
+  max-width: 100% ;
+  box-sizing: border-box;
+  object-fit: contain;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
 `;

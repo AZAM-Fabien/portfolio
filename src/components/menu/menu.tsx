@@ -6,7 +6,7 @@ import { setActiveIcon } from "../../redux/iconSlice";
 import * as S from "./menu_style";
 import Icon from "../icon/icon";
 import Bubble from "../bubble/bubble";
-import { openSettings } from "../../redux/SettingsSlice";
+import { toggleSettings } from "../../redux/openSlice";
 
 const Menu: React.FC = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const Menu: React.FC = () => {
 
     if (iconName === "settings") {
       setTimeout(() => {
-        dispatch(openSettings());
+        dispatch(toggleSettings());
       }, 580);
     }
   };
