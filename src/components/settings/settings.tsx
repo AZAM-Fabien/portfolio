@@ -5,7 +5,6 @@ import { blueTheme, greyTheme, redTheme } from "../../theme/theme";
 import ImageBox from "../imageBox/imageBox";
 import { setActiveImage } from "../../redux/homeSlice";
 import TopContainer from "../topContainer/topContainer";
-import { toggleSettings } from "../../redux/openSlice";
 import { resetActiveIcon } from "../../redux/iconSlice";
 
 const Settings: React.FC = () => {
@@ -22,7 +21,7 @@ const Settings: React.FC = () => {
   };
 
   const handleCloseSettings = () => {
-    dispatch(toggleSettings()), dispatch(resetActiveIcon());
+    dispatch(resetActiveIcon());
   };
 
   return (

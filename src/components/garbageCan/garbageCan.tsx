@@ -1,14 +1,14 @@
 import * as S from "./garbageCan_style";
 import TopContainer from "../topContainer/topContainer";
 import { useDispatch } from "react-redux";
-import { toggleGarbageCan } from "../../redux/openSlice";
 import IconBureau from "../iconBureau/iconBureau";
+import { resetActiveIcon } from "../../redux/iconSlice";
 
 const GarbageCan: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleCloseGarbageCan = () => {
-    dispatch(toggleGarbageCan());
+    dispatch(resetActiveIcon());
   };
 
   return (

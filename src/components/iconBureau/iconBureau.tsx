@@ -1,7 +1,7 @@
 import * as S from "./iconBureau_style";
 import Icon from "../icon/icon";
 import { useDispatch } from "react-redux";
-import { toggleGarbageCan, toggleWord } from "../../redux/openSlice";
+import { setActiveIcon } from "../../redux/iconSlice";
 
 type IconBureauProps = {
   src: string;
@@ -20,19 +20,16 @@ const IconBureau: React.FC<IconBureauProps> = ({
   height: heightIcon,
   colorText: textColor,
 }) => {
-  const dispatch = useDispatch();
-  const handleIconClick = (iconBureau: string) => {
-    if (iconBureau === "iconBureau/garbageCan") {
-      dispatch(toggleGarbageCan());
-    }
 
-    if (iconBureau === "iconBureau/word") {
-      dispatch(toggleWord());
-    }
+  const dispatch = useDispatch();
+
+  const handleIconBureauClick = (iconBureau: string) => {
+    dispatch(setActiveIcon(iconBureau));
   };
 
+
   return (
-    <S.IconBureau onClick={() => handleIconClick(iconSrc)}>
+    <S.IconBureau onClick={() => handleIconBureauClick(iconSrc) }>
       <Icon
         src={`${iconSrc}.svg`}
         alt={iconAlt}

@@ -9,5 +9,5 @@ export const Bubble = styled.div`
   border-radius: 50%;
   background-color:  ${({ theme }) => theme.activeItemDark};
   left: 12px;
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.2s, opacity 0.5s;
 `;

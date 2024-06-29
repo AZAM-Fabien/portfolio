@@ -8,3 +8,22 @@ export const CVWord = styled.div`
   overflow: auto;
   z-index: 1000;
 `;
+
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 22px);
+  gap: 4vw;
+`;
+
+export const TextH2 = styled.h2`
+  margin: 0;
+  font-size: 28px;
+  line-height: 20px;
+  color: ${({ theme }) => theme.textLight};
+`
+
+

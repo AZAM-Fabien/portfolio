@@ -1,12 +1,12 @@
 // src/components/menu/Menu.tsx
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { setActiveIcon } from "../../redux/iconSlice";
 import * as S from "./menu_style";
 import Icon from "../icon/icon";
 import Bubble from "../bubble/bubble";
-import { toggleSettings } from "../../redux/openSlice";
+import { toggleChrome, toggleSettings } from "../../redux/openSlice";
 
 const Menu: React.FC = () => {
   const dispatch = useDispatch();
@@ -14,21 +14,48 @@ const Menu: React.FC = () => {
 
   const handleIconClick = (iconName: string) => {
     dispatch(setActiveIcon(iconName));
-    if (iconName === "github") {
+  };
+
+  const previousIcon = useRef(activeIcon);
+
+  useEffect(() => {
+    if (activeIcon === "github") {
       setTimeout(() => {
         window.open(
           "https://github.com/AZAM-Fabien?tab=repositories",
           "_blank"
         );
-      }, 580);
+      }, 240);
     }
 
-    if (iconName === "settings") {
+    if (activeIcon === "settings") {
       setTimeout(() => {
         dispatch(toggleSettings());
-      }, 580);
+      }, 240);
     }
-  };
+
+
+    if (previousIcon.current === "settings" && activeIcon !== "settings") {
+      setTimeout(() => {
+        dispatch(toggleSettings());
+      }, 120);
+    }
+
+    if (activeIcon === "chrome") {
+      setTimeout(() => {
+        dispatch(toggleChrome());
+      }, 240);
+    }
+
+
+    if (previousIcon.current === "chrome" && activeIcon !== "chrome") {
+      setTimeout(() => {
+        dispatch(toggleChrome());
+      }, 120);
+    }
+
+    previousIcon.current = activeIcon;
+  }, [activeIcon, dispatch]);
 
   return (
     <S.Menu>

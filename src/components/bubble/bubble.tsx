@@ -18,7 +18,7 @@ const Bubble: React.FC<BubbleProps> = ({ activeIcon }) => {
       };
 
       bubbleRef.current.style.transform = `translateX(${positions[activeIcon as keyof typeof positions] || '-100%'})`;
-      bubbleRef.current.style.opacity = activeIcon ? '1' : '0';
+      bubbleRef.current.style.opacity = (activeIcon === 'settings' || activeIcon === 'chrome' || activeIcon === 'github')  ? '1' : '0';
     }
   }, [activeIcon]);
 

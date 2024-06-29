@@ -18,7 +18,7 @@ export const TextH2 = styled.h2`
 `;
 
 export const TextH3 = styled(TextH2)`
-  font-size: 10px;
+  font-size: 14px;
 `;
 
 export const CloseButton = styled.button`
