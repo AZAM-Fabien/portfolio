@@ -4,6 +4,7 @@ import homeSlice from "./homeSlice";
 import openSlice from "./openSlice";
 import colorThemeSlice from "./colorThemeSlice";
 
+
 export const store = configureStore({
   reducer: {
     icon: iconReducer,

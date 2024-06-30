@@ -7,12 +7,13 @@ export const Chrome = styled.div`
   height: 100%;
   overflow: auto;
   z-index: 1000;
+  overflow-x: hidden;
 `;
 
 export const TextH2 = styled.h2`
   margin: 0;
   font-size: 46px;
-  line-height: 20px;
+  line-height: 46px;
   color: ${({ theme }) => theme.textLight};
 `;
 
@@ -37,9 +38,8 @@ export const ContainerRow = styled.div`
 
 export const MainContainer = styled(ContainerColumn)`
   width: 100%;
-  height: calc(100% - 22px);
-  padding: 80px 40px;
-  gap: 4vw;
+  padding: 40px 40px;
+  gap: max(4vw, 20px);
   box-sizing: border-box;
 `;
 
@@ -48,6 +48,10 @@ export const Container = styled(ContainerRow)`
   height: 60%;
   gap: 4vw;
   box-sizing: border-box;
+
+  @media (max-width: 612px) {
+    flex-direction: column;
+  }
 `;
 
 export const PictureWrapper = styled.div`
@@ -95,13 +99,32 @@ export const PictureBlur = styled(Picture)`
   z-index: -1;
 `;
 
-export const Container2 = styled(ContainerRow)`
-  width: 72%;
-  height: 100%;
+export const Container2 = styled(ContainerColumn)`
+  width: 100%;
   gap: 4vw;
 `;
 
 export const Story = styled.div`
+  width: 72%;
+  height: auto;
+  line-height: 24px;
+  font-size: min(2vw, 16px);
+
+  @media (max-width: 612px) {
+    font-size: 12px;
+    width: 100%;
+  }
+`;
+
+export const Story2 = styled(Story)`
+  width: 100%;
+`;
+
+export const ContainerSlider = styled.div`
+  position: relative;
   width: 100%;
   height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
