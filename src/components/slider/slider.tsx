@@ -45,10 +45,7 @@ const Slider: React.FC = () => {
         "_blank"
       );
     } else if (site === "Portfolio/Kasa.webp") {
-      window.open(
-        "https://vercel.com/azam-fabiens-projects/kasa",
-        "_blank"
-      );
+      window.open("https://vercel.com/azam-fabiens-projects/kasa", "_blank");
     } else if (site === "Portfolio/OhMYFood.webp") {
       window.open(
         "https://vercel.com/azam-fabiens-projects/ohmy-food",

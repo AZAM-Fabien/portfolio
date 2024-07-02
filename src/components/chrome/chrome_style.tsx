@@ -118,6 +118,9 @@ export const Story = styled.div`
 
 export const Story2 = styled(Story)`
   width: 100%;
+  display: flex;
+  justify-content: center;
+
 `;
 
 export const ContainerSlider = styled.div`
