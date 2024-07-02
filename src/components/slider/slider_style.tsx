@@ -50,11 +50,11 @@ export const Text = styled.div`
 
 export const ButtonContainer = styled.div`
   position: absolute;
-  bottom: -60px;
+  bottom: -80px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   z-index: 10;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 `;
 
 export const Button = styled.button`
