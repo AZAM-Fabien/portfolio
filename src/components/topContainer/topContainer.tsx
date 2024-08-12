@@ -5,7 +5,7 @@ const TopContainer: React.FC<{ title: string; onClick: () => void }> = ({
   onClick,
 }) => {
   return (
-    <S.TopContainer>
+    <S.TopContainer  >
       <S.TextH3>{title}</S.TextH3>
       <S.CloseButton
         type="button"

@@ -1,11 +1,11 @@
 import * as S from "./Home_style";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import Settings from "../../components/settings/settings";
-import Chrome from "../../components/chrome/chrome";
+import Settings from "../settings/settings";
+import Chrome from "../chrome/chrome";
 import IconBureau from "../../components/iconBureau/iconBureau";
-import GarbageCan from "../../components/garbageCan/garbageCan";
-import CVWord from "../../components/cvWord/cvWord";
+import GarbageCan from "../garbageCan/garbageCan";
+import CVWord from "../cvWord/cvWord";
 import { useRef, useEffect } from "react";
 import { toggleGarbageCan, toggleWord } from "../../redux/openSlice";
 import { useDispatch } from "react-redux";
@@ -57,7 +57,6 @@ function Home() {
     previousIcon.current = activeIcon;
 
   }, [activeIcon, dispatch]);
-
 
   return (
     <>
