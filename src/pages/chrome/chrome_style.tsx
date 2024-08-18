@@ -12,8 +12,8 @@ export const Chrome = styled.div`
 
 export const TextH2 = styled.h2`
   margin: 0;
-  font-size: 46px;
-  line-height: 46px;
+  font-size: 36px;
+  line-height: 36px;
   color: ${({ theme }) => theme.textLight};
 `;
 
@@ -22,34 +22,38 @@ export const TextH3 = styled.h3`
   color: ${({ theme }) => theme.textLight};
 `;
 
-export const ContainerColumn = styled.div`
+export const MainContainer = styled.div`
+  height: calc(100% - 22px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+`;
+
+export const ChromeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-export const ContainerRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const MainContainer = styled(ContainerColumn)`
   width: 100%;
   padding: 40px 40px;
   gap: max(4vw, 20px);
   box-sizing: border-box;
+  margin: auto;
+  padding-top: 30px;
 `;
 
-export const Container = styled(ContainerRow)`
+export const Container = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 60%;
   gap: 4vw;
   box-sizing: border-box;
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     flex-direction: column;
   }
 `;
@@ -99,7 +103,11 @@ export const PictureBlur = styled(Picture)`
   z-index: -1;
 `;
 
-export const Container2 = styled(ContainerColumn)`
+export const Container2 = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 4vw;
 `;
@@ -110,7 +118,7 @@ export const Story = styled.div`
   line-height: 24px;
   font-size: min(2vw, 16px);
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     font-size: 12px;
     width: 100%;
   }
@@ -120,7 +128,6 @@ export const Story2 = styled(Story)`
   width: 100%;
   display: flex;
   justify-content: center;
-
 `;
 
 export const ContainerSlider = styled.div`

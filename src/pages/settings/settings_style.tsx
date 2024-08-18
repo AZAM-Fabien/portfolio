@@ -10,11 +10,19 @@ export const Settings = styled.div`
 `;
 
 export const TextH2 = styled.h2`
+  width: 100%;
+  text-align: center;
   margin: 0;
-  margin-left: 1rem;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 34px;
   color: ${({ theme }) => theme.textLight};
+`;
+
+export const MainContainer = styled.div`
+  height: calc(100% - 22px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
 `;
 
 export const Container = styled.div`
@@ -22,6 +30,8 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 4vw;
+  margin: auto;
+  padding: 30px 0;
 `;
 
 export const ColorsMenu = styled.div`
@@ -34,7 +44,7 @@ export const ColorsMenu = styled.div`
 export const ColorsContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   box-sizing: border-box;
   height: 100%;
@@ -68,7 +78,7 @@ export const ImageContainer1 = styled.div`
   padding-right: 3vw;
   box-sizing: border-box;
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     flex-direction: column;
     padding-left: 6vw;
     padding-right: 6vw;
@@ -84,7 +94,7 @@ export const ImageContainer2 = styled.div`
   padding-right: 3vw;
   box-sizing: border-box;
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     flex-direction: column;
     padding-left: 6vw;
     padding-right: 6vw;
@@ -100,7 +110,7 @@ export const BoxImage = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     height: auto;
   }
 `;

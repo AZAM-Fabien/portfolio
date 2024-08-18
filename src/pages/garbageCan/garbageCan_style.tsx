@@ -22,6 +22,6 @@ export const TextH3 = styled.h3`
 
 export const Icon   = styled.div`
   position: relative;
-  top: 20px;
-  left: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
 `

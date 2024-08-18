@@ -6,7 +6,7 @@ export const WeatherContainer = styled.div`
   bottom: calc(15px + min(4vw, 20px));
   margin-left: 20px;
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     top: 10px;
     bottom: unset;
   }

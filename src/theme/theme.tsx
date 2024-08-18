@@ -6,7 +6,7 @@ export const blueTheme = {
   itemDark2: "#0090FF",
   textDark: "#C2E6FF",
   backgroundLight: "#FBFDFF",
-  backgroundLight2: "#E6F4FE",
+  backgroundLight2: " #E6F4FE",
   itemLight: "#C2E5FF",
   activeItemLight: "#8EC8F6",
   itemLight2: "#0090FF",

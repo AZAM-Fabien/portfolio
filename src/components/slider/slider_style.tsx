@@ -3,18 +3,19 @@ import { motion } from "framer-motion";
 
 export const Box = styled.div`
   position: relative;
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3/2;
   display: flex;
   justify-content: center;
   align-items: center;
 
-   @media (max-width: 612px) {
+  @media (max-width: 680px) {
     overflow: hidden;
     width: 100%;
     height: auto;
     aspect-ratio: 3/2;
-   }
+  }
 `;
 
 export const Item = styled(motion.div)<{ img: string }>`
@@ -28,7 +29,7 @@ export const Item = styled(motion.div)<{ img: string }>`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     aspect-ratio: 3/2;
     width: 100%;
     height: auto;

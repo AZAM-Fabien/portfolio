@@ -6,7 +6,7 @@ export const TimeContainer = styled.div`
   bottom: calc(23px + min(4vw, 20px));
   right: 20px;
 
-  @media (max-width: 612px) {
+  @media (max-width: 680px) {
     top: 10px;
     bottom: unset;
   }

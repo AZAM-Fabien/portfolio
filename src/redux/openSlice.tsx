@@ -4,7 +4,7 @@ const initialState = {
   isOpen: {
     settings: false,
     garbageCan: false,
-    word: false,
+    cvWord: false,
     chrome: false,
   },
 };
@@ -19,8 +19,8 @@ const openSlice = createSlice({
     toggleGarbageCan: (state) => {
       state.isOpen.garbageCan = !state.isOpen.garbageCan;
     },
-    toggleWord: (state) => {
-      state.isOpen.word = !state.isOpen.word;
+    toggleCVWord: (state) => {
+      state.isOpen.cvWord = !state.isOpen.cvWord;
     },
     toggleChrome: (state) => {
       state.isOpen.chrome = !state.isOpen.chrome;
@@ -28,7 +28,7 @@ const openSlice = createSlice({
   },
 });
 
-export const { toggleSettings, toggleGarbageCan, toggleWord, toggleChrome } =
+export const { toggleSettings, toggleGarbageCan, toggleCVWord, toggleChrome } =
   openSlice.actions;
 
 export default openSlice.reducer;

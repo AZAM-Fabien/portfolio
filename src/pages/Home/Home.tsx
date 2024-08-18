@@ -7,9 +7,8 @@ import IconBureau from "../../components/iconBureau/iconBureau";
 import GarbageCan from "../garbageCan/garbageCan";
 import CVWord from "../cvWord/cvWord";
 import { useRef, useEffect } from "react";
-import { toggleGarbageCan, toggleWord } from "../../redux/openSlice";
+import { toggleGarbageCan, toggleCVWord } from "../../redux/openSlice";
 import { useDispatch } from "react-redux";
-
 
 function Home() {
   const image = useSelector((state: RootState) => state.image.activeImage);
@@ -21,22 +20,24 @@ function Home() {
   );
   const chromeIsOpen = useSelector(
     (state: RootState) => state.open.isOpen.chrome
-  )
-  const wordIsOpen = useSelector((state: RootState) => state.open.isOpen.word);
+  );
+  const cvWordIsOpen = useSelector((state: RootState) => state.open.isOpen.cvWord);
   const activeIcon = useSelector((state: RootState) => state.icon.activeIcon);
 
   const dispatch = useDispatch();
   const previousIcon = useRef(activeIcon);
 
   useEffect(() => {
-    
     if (activeIcon === "iconBureau/garbageCan") {
       setTimeout(() => {
         dispatch(toggleGarbageCan());
       }, 100);
     }
 
-    if (previousIcon.current === "iconBureau/garbageCan" && activeIcon !== "iconBureau/garbageCan") {
+    if (
+      previousIcon.current === "iconBureau/garbageCan" &&
+      activeIcon !== "iconBureau/garbageCan"
+    ) {
       setTimeout(() => {
         dispatch(toggleGarbageCan());
       }, 100);
@@ -44,18 +45,20 @@ function Home() {
 
     if (activeIcon === "iconBureau/word") {
       setTimeout(() => {
-        dispatch(toggleWord());
+        dispatch(toggleCVWord());
       }, 100);
     }
 
-    if (previousIcon.current === "iconBureau/word" && activeIcon !== "iconBureau/word") {
+    if (
+      previousIcon.current === "iconBureau/word" &&
+      activeIcon !== "iconBureau/word"
+    ) {
       setTimeout(() => {
-        dispatch(toggleWord());
+        dispatch(toggleCVWord());
       }, 100);
     }
 
     previousIcon.current = activeIcon;
-
   }, [activeIcon, dispatch]);
 
   return (
@@ -65,7 +68,7 @@ function Home() {
         {settingsIsOpen && <Settings />}
         {chromeIsOpen && <Chrome />}
         {garbageCanIsOpen && <GarbageCan />}
-        {wordIsOpen && <CVWord />}
+        {cvWordIsOpen && <CVWord />}
         <S.IconContainer>
           {[
             { src: "garbageCan", alt: "icon poubelle", text: "corbeille" },
