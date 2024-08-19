@@ -39,11 +39,11 @@ const CVWord: React.FC = () => {
                 <S.Name>
                   <S.NameH2>AZAM Fabien</S.NameH2>
                 </S.Name>
-                  <S.PositionH2>
-                    Développeur Web
-                    <br />
-                    front-end
-                  </S.PositionH2>
+                <S.PositionH2>
+                  Développeur Web
+                  <br />
+                  front-end
+                </S.PositionH2>
               </S.NamePositionContainer>
             </S.PresentationFrame>
             <S.ContactDetails>
@@ -76,112 +76,114 @@ const CVWord: React.FC = () => {
             </S.ContactDetails>
           </S.Column1>
 
-          {/* Column 2  */}
+          <S.ContainerColumn>
+            {/* Column 2  */}
 
-          <S.Column2>
-            <S.ContainerProfile>
-              <S.TextShrinkH2>Profile personnel</S.TextShrinkH2>
-              <S.ContainerInside>
-                <S.TextShrinkH3>
-                  Développeur front-end passionné avec une formation d'ingénieur
-                  biomédicale, je suis à la recherche d'opportunités en
-                  freelance ou en CDD/CDI, privilégiant le télétravail ou la
-                  région parisienne. Ma formation m'a inculqué une rigueur
-                  scientifique, une capacité à résoudre des problèmes complexes
-                  et une attention minutieuse aux détails, des atouts que
-                  j'applique dans le développement web. Ouvert à des projets en
-                  français ou en anglais. Je reste réceptif à toute offre de CDD
-                  ou CDI.
-                </S.TextShrinkH3>
-              </S.ContainerInside>
-            </S.ContainerProfile>
+            <S.Column2>
+              <S.ContainerProfile>
+                <S.TextShrinkH2>Profile personnel</S.TextShrinkH2>
+                <S.ContainerInside>
+                  <S.TextShrinkH3>
+                    Développeur front-end passionné avec une formation
+                    d'ingénieur biomédicale, je suis à la recherche
+                    d'opportunités en freelance ou en CDD/CDI, privilégiant le
+                    télétravail ou la région parisienne. Ma formation m'a
+                    inculqué une rigueur scientifique, une capacité à résoudre
+                    des problèmes complexes et une attention minutieuse aux
+                    détails, des atouts que j'applique dans le développement
+                    web. Ouvert à des projets en français ou en anglais. Je
+                    reste réceptif à toute offre de CDD ou CDI.
+                  </S.TextShrinkH3>
+                </S.ContainerInside>
+              </S.ContainerProfile>
 
-            <S.ContainerExperience>
-              <S.TextShrinkH2>
-                Expérience professionnelle et associative
-              </S.TextShrinkH2>
-              <S.ContainerInside>
-                <S.TextShrinkH3>
-                  Stage de Recherche (04/2022 à 09/2022) QUANTIF (LABORATOIRE
-                  LITIS EA 4108) - Rouen
-                </S.TextShrinkH3>
-                <S.TextShrinkH4>
-                  - Prédiction de la récidive des tumeurs cérébrales à partir de
-                  données médicales (Python) - Analyse de données médicales pour
-                  améliorer les algorithmes de prédiction - Collaboration avec
-                  une équipe de chercheurs pour développer des solutions
-                  innovantes
-                </S.TextShrinkH4>
-              </S.ContainerInside>
-              <S.ContainerInside>
-                <S.TextShrinkH3>
-                  CA1 Entraineur de Football Américain - 12 ans (10/2019 -
-                  05/2021) - FFFA
-                </S.TextShrinkH3>
-                <S.TextShrinkH4>
-                  - Evreux Encadrement d'activités sportives en extérieur et
-                  gestion du matériel
-                </S.TextShrinkH4>
-              </S.ContainerInside>
-            </S.ContainerExperience>
-          </S.Column2>
+              <S.ContainerExperience>
+                <S.TextShrinkH2>
+                  Expérience professionnelle et associative
+                </S.TextShrinkH2>
+                <S.ContainerInside>
+                  <S.TextShrinkH3>
+                    Stage de Recherche (04/2022 à 09/2022) QUANTIF (LABORATOIRE
+                    LITIS EA 4108) - Rouen
+                  </S.TextShrinkH3>
+                  <S.TextShrinkH4>
+                    - Prédiction de la récidive des tumeurs cérébrales à partir
+                    de données médicales (Python) - Analyse de données médicales
+                    pour améliorer les algorithmes de prédiction - Collaboration
+                    avec une équipe de chercheurs pour développer des solutions
+                    innovantes
+                  </S.TextShrinkH4>
+                </S.ContainerInside>
+                <S.ContainerInside>
+                  <S.TextShrinkH3>
+                    CA1 Entraineur de Football Américain - 12 ans (10/2019 -
+                    05/2021) - FFFA
+                  </S.TextShrinkH3>
+                  <S.TextShrinkH4>
+                    - Evreux Encadrement d'activités sportives en extérieur et
+                    gestion du matériel
+                  </S.TextShrinkH4>
+                </S.ContainerInside>
+              </S.ContainerExperience>
+            </S.Column2>
 
-          {/* Column 3  */}
+            {/* Column 3  */}
 
-          <S.Column3>
-            <S.ContainerSkills>
-              <S.TextShrinkH2>Compétences</S.TextShrinkH2>
-              <S.ContainerInside>
-                <S.TextShrinkH3>
-                  • Langages de programmation : HTML, CSS, SCSS, JavaScript,
-                  React, TypeScript, Python.
-                </S.TextShrinkH3>
-                <S.TextShrinkH3>
-                  • Gestion de données; state (Redux et Redux Toolkit).
-                </S.TextShrinkH3>
-                <S.TextShrinkH3>
-                  • Débogage (React Developer Tools) et test unitaire
-                  intégration E2E (Jest).
-                </S.TextShrinkH3>
-                <S.TextShrinkH3>
-                  • SEO : Optimisation pour les moteurs de recherche, audit SEO
-                  (Wave Lighthouse).
-                </S.TextShrinkH3>
-                <S.TextShrinkH3>
-                  • Recherche sur publication / veille informationnelle.
-                </S.TextShrinkH3>
+            <S.Column3>
+              <S.ContainerSkills>
+                <S.TextShrinkH2>Compétences</S.TextShrinkH2>
+                <S.ContainerInside>
+                  <S.TextShrinkH3>
+                    • Langages de programmation : HTML, CSS, SCSS, JavaScript,
+                    React, TypeScript, Python.
+                  </S.TextShrinkH3>
+                  <S.TextShrinkH3>
+                    • Gestion de données; state (Redux et Redux Toolkit).
+                  </S.TextShrinkH3>
+                  <S.TextShrinkH3>
+                    • Débogage (React Developer Tools) et test unitaire
+                    intégration E2E (Jest).
+                  </S.TextShrinkH3>
+                  <S.TextShrinkH3>
+                    • SEO : Optimisation pour les moteurs de recherche, audit
+                    SEO (Wave Lighthouse).
+                  </S.TextShrinkH3>
+                  <S.TextShrinkH3>
+                    • Recherche sur publication / veille informationnelle.
+                  </S.TextShrinkH3>
 
-                <S.TextShrinkH2Special>Soft skills</S.TextShrinkH2Special>
+                  <S.TextShrinkH2Special>Soft skills</S.TextShrinkH2Special>
 
-                <S.TextShrinkH3>
-                  • Travail en équipe; Communication; Méthodologies : Agile,
-                  Scrum.
-                </S.TextShrinkH3>
-                <S.TextShrinkH3>• Résolution de problèmes</S.TextShrinkH3>
-                <S.TextShrinkH3>• Adaptabilité</S.TextShrinkH3>
-                <S.TextShrinkH3>
-                  • Curiosité et apprentissage continu
-                </S.TextShrinkH3>
-              </S.ContainerInside>
-            </S.ContainerSkills>
+                  <S.TextShrinkH3>
+                    • Travail en équipe; Communication; Méthodologies : Agile,
+                    Scrum.
+                  </S.TextShrinkH3>
+                  <S.TextShrinkH3>• Résolution de problèmes</S.TextShrinkH3>
+                  <S.TextShrinkH3>• Adaptabilité</S.TextShrinkH3>
+                  <S.TextShrinkH3>
+                    • Curiosité et apprentissage continu
+                  </S.TextShrinkH3>
+                </S.ContainerInside>
+              </S.ContainerSkills>
 
-            <S.ContainerFormation>
-              <S.TextShrinkH2>Formation</S.TextShrinkH2>
-              <S.ContainerInside>
-                <S.TextShrinkH3>
-                  2023 – 2024 : OpenClassroom – développeur intégrateur web.
-                  (Niveau 5 bac +2, RNCP36076)
-                </S.TextShrinkH3>
-              </S.ContainerInside>
-              <S.ContainerInside>
-                <S.TextShrinkH3>
-                  2020 – 2022 : UFR Sciences et Techniques - Rouen Master
-                  Ingéniérie pour le Bio-médical Ingénierie de la santé –
-                  Mention Bien.
-                </S.TextShrinkH3>
-              </S.ContainerInside>
-            </S.ContainerFormation>
-          </S.Column3>
+              <S.ContainerFormation>
+                <S.TextShrinkH2>Formation</S.TextShrinkH2>
+                <S.ContainerInside>
+                  <S.TextShrinkH3>
+                    2023 – 2024 : OpenClassroom – développeur intégrateur web.
+                    (Niveau 5 bac +2, RNCP36076)
+                  </S.TextShrinkH3>
+                </S.ContainerInside>
+                <S.ContainerInside>
+                  <S.TextShrinkH3>
+                    2020 – 2022 : UFR Sciences et Techniques - Rouen Master
+                    Ingéniérie pour le Bio-médical Ingénierie de la santé –
+                    Mention Bien.
+                  </S.TextShrinkH3>
+                </S.ContainerInside>
+              </S.ContainerFormation>
+            </S.Column3>
+          </S.ContainerColumn>
         </S.CVMain>
       </S.MainContainer>
     </S.CVWord>

@@ -26,6 +26,11 @@ export const CVMain = styled.div`
   @media (max-width: 1439px) {
     gap: 20px;
   }
+
+  @media (max-width: 1079px) {
+    flex-direction: column;
+  }
+
 `;
 
 const Column = styled.div`
@@ -47,7 +52,13 @@ const Column = styled.div`
 export const Column1 = styled(Column)`
   width: 260px;
 
+  @media (max-width: 1079px) {
+    flex-direction: row;
+    width : 100%;
+  }
+
   @media (max-width: 680px) {
+    flex-direction: column;
   }
 `;
 
@@ -59,6 +70,10 @@ export const PresentationFrame = styled.div`
   justify-content: center;
   width: 100%;
   margin-top: 75px;
+
+  @media (max-width: 1079px) {
+    width: 260px;
+  }
 `;
 
 export const Picture = styled.img`
@@ -82,6 +97,7 @@ export const NamePositionContainer = styled.div`
   gap: 10px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
   padding-bottom: 10px;
+  
 `;
 
 export const Name = styled.address`
@@ -105,6 +121,10 @@ export const ContactDetails = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @media (max-width: 1079px) {
+    width: 260px;
+  }
 `;
 
 export const TextH2 = styled.h2`
@@ -168,10 +188,30 @@ export const LinkedInLink = styled.a`
 
 export const Address = ListItem;
 
+// *********Column 2 + 3***********
+
+export const ContainerColumn = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 1439px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+  }
+`;
+
 // *********Column 2***********
 
 export const Column2 = styled(Column)`
   max-width: 500px;
+
+  @media (max-width: 680px) {
+    width: 100%;
+  }
 `;
 
 const ContainerCV = styled.div`
@@ -232,6 +272,10 @@ export const TextShrinkH4 = styled(TextH4)`
 
 export const Column3 = styled(Column)`
   max-width: 500px;
+
+  @media (max-width: 680px) {
+    width: 100%;
+  }
 `;
 
 export const TextShrinkH2Special = styled(TextShrinkH2)`
