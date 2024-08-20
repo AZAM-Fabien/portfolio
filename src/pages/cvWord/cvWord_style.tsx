@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+
 export const CVWord = styled.div`
   position: absolute;
   background-color: ${({ theme }) => theme.backgroundLight2};
@@ -177,13 +179,35 @@ export const Email = ListItem;
 export const EmailTo = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.textLight};
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    color: ${({ theme }) => theme.activeItemLight};
+
+    &:hover > h3,h4 {
+      color: ${({ theme }) => theme.activeItemLight};
+    }
+  }
 `;
 
 export const LinkedIn = ListItem;
 
 export const LinkedInLink = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.textLight}; 
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    color: ${({ theme }) => theme.activeItemLight};
+
+    &:hover > h3,h4 {
+      color: ${({ theme }) => theme.activeItemLight};
+    }
+  }
 `;
 
 export const Address = ListItem;

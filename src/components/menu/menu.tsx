@@ -6,7 +6,7 @@ import { setActiveIcon } from "../../redux/iconSlice";
 import * as S from "./menu_style";
 import Icon from "../icon/icon";
 import Bubble from "../bubble/bubble";
-import { toggleChrome, toggleSettings } from "../../redux/openSlice";
+import { toggleChrome, toggleSettings, toggleCVWord } from "../../redux/openSlice";
 
 const Menu: React.FC = () => {
   const dispatch = useDispatch();
@@ -19,13 +19,16 @@ const Menu: React.FC = () => {
   const previousIcon = useRef(activeIcon);
 
   useEffect(() => {
-    if (activeIcon === "github") {
+    if (activeIcon === "word") {
       setTimeout(() => {
-        window.open(
-          "https://github.com/AZAM-Fabien?tab=repositories",
-          "_blank"
-        );
+        dispatch(toggleCVWord());
       }, 240);
+    }
+
+    if (previousIcon.current === "word" && activeIcon !== "word") {
+      setTimeout(() => {
+        dispatch(toggleCVWord());
+      }, 120);
     }
 
     if (activeIcon === "settings") {
@@ -33,7 +36,6 @@ const Menu: React.FC = () => {
         dispatch(toggleSettings());
       }, 240);
     }
-
 
     if (previousIcon.current === "settings" && activeIcon !== "settings") {
       setTimeout(() => {
@@ -47,7 +49,6 @@ const Menu: React.FC = () => {
       }, 240);
     }
 
-
     if (previousIcon.current === "chrome" && activeIcon !== "chrome") {
       setTimeout(() => {
         dispatch(toggleChrome());
@@ -60,9 +61,9 @@ const Menu: React.FC = () => {
   return (
     <S.Menu>
       <S.Ul>
-        {["settings", "chrome", "github"].map((icon) => (
+        {["settings", "chrome", "word"].map((icon) => (
           <S.Li key={icon} onClick={() => handleIconClick(icon)}>
-            <Icon src={`${icon}.svg`} alt={icon} />
+            <Icon href={`${icon}.svg#${icon}`} alt={`logo ${icon}`} />
           </S.Li>
         ))}
         <Bubble activeIcon={activeIcon} />

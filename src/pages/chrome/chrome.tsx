@@ -26,15 +26,15 @@ const Chrome: React.FC = () => {
   };
 
   return (
-    <S.Chrome ref={chromeRef} tabIndex={0} onKeyDown={handleKeyDown}>
+    <S.Chrome role="dialog" aria-modal="true" ref={chromeRef} tabIndex={0} onKeyDown={handleKeyDown}>
       <TopContainer title="Chrome" onClick={handleCloseChrome} />
       <S.MainContainer>
         <S.ChromeContainer>
           <S.TextH2>Portfolio</S.TextH2>
           <S.Container>
             <S.PictureWrapper>
-              <S.Picture src="Portfolio/Myself.webp" />
-              <S.PictureBlur src="Portfolio/Myself.webp" />
+              <S.Picture alt="photo de Fabien" src="Portfolio/Myself.webp" />
+              <S.PictureBlur alt="effet de flou" aria-hidden="true" src="Portfolio/Myself.webp" />
             </S.PictureWrapper>
             <S.Story>
               <p>

@@ -13,12 +13,8 @@ body {
     border-bottom: 0px;
 }
 
-h1, h2 {
-    font-family: 'DotGothic16', sans-serif;
-}
-
-h3, h4, h5, p {
-    font-family: wellfleet, monospace;
+h1, h2, h3, h4, h5, p {
+    font-family: sans-serif;
 }
 
 p {

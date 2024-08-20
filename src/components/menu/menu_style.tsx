@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Menu = styled.div`
+export const Menu = styled.nav`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.itemDark};
-  width: 200px;
-  height: 80%;
+  width: 220px;
+  height: 90%;
   border-radius: 10px;
 `;
 

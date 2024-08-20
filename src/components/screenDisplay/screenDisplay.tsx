@@ -4,7 +4,7 @@ import Led from "../led/led.tsx";
 const ScreenDisplay = () => {
   return (
     <S.ScreenDisplay>
-      <S.Text> Sony </S.Text>
+      <S.Text> iiyama </S.Text>
       <S.LedContainer>
         <Led delay={3} />
         <Led delay={2} />

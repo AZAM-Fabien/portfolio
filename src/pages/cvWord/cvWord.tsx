@@ -26,7 +26,7 @@ const CVWord: React.FC = () => {
   };
 
   return (
-    <S.CVWord ref={CVRef} tabIndex={0} onKeyDown={handleKeyDown}>
+    <S.CVWord role="dialog" aria-modal="true" ref={CVRef} tabIndex={0} onKeyDown={handleKeyDown}>
       <TopContainer title="CV PDF" onClick={handleCloseCV} />
       <S.MainContainer>
         <S.CVMain>
@@ -34,7 +34,7 @@ const CVWord: React.FC = () => {
 
           <S.Column1>
             <S.PresentationFrame>
-              <S.Picture src="Portfolio/Myself.webp" />
+              <S.Picture alt ="photo de Fabien" src="Portfolio/Myself.webp" />
               <S.NamePositionContainer>
                 <S.Name>
                   <S.NameH2>AZAM Fabien</S.NameH2>
@@ -81,12 +81,12 @@ const CVWord: React.FC = () => {
 
             <S.Column2>
               <S.ContainerProfile>
-                <S.TextShrinkH2>Profile personnel</S.TextShrinkH2>
+                <S.TextShrinkH2>Profil personnel</S.TextShrinkH2>
                 <S.ContainerInside>
                   <S.TextShrinkH3>
                     Développeur front-end passionné avec une formation
                     d'ingénieur biomédicale, je suis à la recherche
-                    d'opportunités en freelance ou en CDD/CDI, privilégiant le
+                    d'opportunités en tant que freelance, privilégiant le
                     télétravail ou la région parisienne. Ma formation m'a
                     inculqué une rigueur scientifique, une capacité à résoudre
                     des problèmes complexes et une attention minutieuse aux

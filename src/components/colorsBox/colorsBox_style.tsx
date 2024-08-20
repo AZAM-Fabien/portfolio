@@ -11,9 +11,13 @@ export const ColorsBox = styled.button<{ $colors: string, $colors2: string }>`
   max-height: 300px;
   max-width: 300px; 
 
+  font-size: 20px;
+  color: ${props => props.$colors2};
+
   &:hover {
     background-color: ${(props) => props.$colors2};
     box-shadow: 0.8vw 0.8vw 2.4vw 0.2vw ${(props) => props.$colors};
+    color: ${props => props.$colors};
     cursor: pointer;
   }
 `;

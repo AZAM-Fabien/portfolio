@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import Settings from "../settings/settings";
 import Chrome from "../chrome/chrome";
-import IconBureau from "../../components/iconBureau/iconBureau";
+import IconDesktop from "../../components/iconDesktop/iconDesktop";
 import GarbageCan from "../garbageCan/garbageCan";
 import CVWord from "../cvWord/cvWord";
 import { useRef, useEffect } from "react";
-import { toggleGarbageCan, toggleCVWord } from "../../redux/openSlice";
+import { toggleGarbageCan } from "../../redux/openSlice";
 import { useDispatch } from "react-redux";
 
 function Home() {
@@ -21,40 +21,33 @@ function Home() {
   const chromeIsOpen = useSelector(
     (state: RootState) => state.open.isOpen.chrome
   );
-  const cvWordIsOpen = useSelector((state: RootState) => state.open.isOpen.cvWord);
+  const cvWordIsOpen = useSelector(
+    (state: RootState) => state.open.isOpen.cvWord
+  );
   const activeIcon = useSelector((state: RootState) => state.icon.activeIcon);
 
   const dispatch = useDispatch();
   const previousIcon = useRef(activeIcon);
 
   useEffect(() => {
-    if (activeIcon === "iconBureau/garbageCan") {
+    if (activeIcon === "garbageCan") {
       setTimeout(() => {
         dispatch(toggleGarbageCan());
       }, 100);
     }
 
-    if (
-      previousIcon.current === "iconBureau/garbageCan" &&
-      activeIcon !== "iconBureau/garbageCan"
-    ) {
+    if (previousIcon.current === "garbageCan" && activeIcon !== "garbageCan") {
       setTimeout(() => {
         dispatch(toggleGarbageCan());
       }, 100);
     }
 
-    if (activeIcon === "iconBureau/word") {
+    if (activeIcon === "github") {
       setTimeout(() => {
-        dispatch(toggleCVWord());
-      }, 100);
-    }
-
-    if (
-      previousIcon.current === "iconBureau/word" &&
-      activeIcon !== "iconBureau/word"
-    ) {
-      setTimeout(() => {
-        dispatch(toggleCVWord());
+        window.open(
+          "https://github.com/AZAM-Fabien?tab=repositories",
+          "_blank"
+        );
       }, 100);
     }
 
@@ -64,6 +57,15 @@ function Home() {
   return (
     <>
       <S.Container>
+        <S.PostIt>
+          <S.TextPostIt>
+            {" "}
+            Azam Fabien, Développeur front-end passionné avec une formation
+            d'ingénieur biomédicale, je suis à la recherche d'opportunités en
+            tant que freelance, privilégiant le <br/> télétravail
+          </S.TextPostIt>
+          <S.ImagePostIt src={`wallpaper/PostIt.webp`} alt="Post-It" />
+        </S.PostIt>
         <S.Image src={`wallpaper/${image}.webp`} alt={image} />
         {settingsIsOpen && <Settings />}
         {chromeIsOpen && <Chrome />}
@@ -71,15 +73,13 @@ function Home() {
         {cvWordIsOpen && <CVWord />}
         <S.IconContainer>
           {[
-            { src: "garbageCan", alt: "icon poubelle", text: "corbeille" },
-            { src: "word", alt: "icon word", text: " CV.PDF" },
-          ].map(({ src, alt, text }, index) => (
-            <IconBureau
-              key={index}
-              src={`iconBureau/${src}`}
-              alt={`${alt}`}
-              text={`${text}`}
-            />
+            { src: "garbageCan", text: "corbeille" },
+            { src: "github", text: "github" },
+            { src: "settings", text: "settings" },
+            { src: "word", text: " CV.PDF" },
+            { src: "chrome", text: "chrome" },
+          ].map(({ src, text }, index) => (
+            <IconDesktop key={index} href={`${src}`} text={`${text}`} />
           ))}
         </S.IconContainer>
       </S.Container>

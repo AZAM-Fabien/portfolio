@@ -1,11 +1,9 @@
 import * as S from "./garbageCan_style";
 import TopContainer from "../../components/topContainer/topContainer";
 import { useDispatch } from "react-redux";
-import IconBureau from "../../components/iconBureau/iconBureau";
+import IconDesktop from "../../components/iconDesktop/iconDesktop";
 import { resetActiveIcon } from "../../redux/iconSlice";
 import { useEffect, useRef } from "react";
-
-
 
 const GarbageCan: React.FC = () => {
   const GarbageCanRef = useRef<HTMLDivElement>(null);
@@ -28,13 +26,13 @@ const GarbageCan: React.FC = () => {
   };
 
   return (
-    <S.GarbageCan ref={GarbageCanRef} onKeyDown={handleKeyDown} tabIndex={0} >
+    <S.GarbageCan role="dialog" aria-modal="true" ref={GarbageCanRef} onKeyDown={handleKeyDown} tabIndex={0}>
       <TopContainer title="Corbeille" onClick={handleCloseGarbageCan} />
       <S.TextH3>ici repose en paix </S.TextH3>
       <S.Icon>
-        <IconBureau
-          src="garbageCan\bootsrap"
-          alt="icon boostrap"
+        <IconDesktop
+          href="bootstrap"
+          class="bootstrap"
           text="Bootstrap"
           width="50px"
           height="50px"

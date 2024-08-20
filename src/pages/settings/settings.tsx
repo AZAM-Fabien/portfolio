@@ -39,7 +39,7 @@ const Settings: React.FC = () => {
   };
 
   return (
-    <S.Settings ref={settingsRef} onKeyDown={handleKeyDown} tabIndex={0}>
+    <S.Settings role="dialog" aria-modal="true"ref={settingsRef} onKeyDown={handleKeyDown} tabIndex={0}>
       <TopContainer title="Paramètre" onClick={handleCloseSettings} />
       <S.MainContainer>
         <S.Container>

@@ -23,7 +23,7 @@ const ColorsBox: React.FC<ColorProps> = ({ color, color2}) => {
         }
     };
 
-    return <S.ColorsBox $colors={color} $colors2={color2} onClick={handleClick}/>;
+    return <S.ColorsBox  $colors={color} $colors2={color2} onClick={handleClick}> choix de la couleur   </S.ColorsBox>;
 };
 
 export default ColorsBox;

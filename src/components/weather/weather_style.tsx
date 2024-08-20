@@ -9,6 +9,9 @@ export const WeatherContainer = styled.div`
   @media (max-width: 680px) {
     top: 10px;
     bottom: unset;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: ${({ theme }) => theme.backgroundDark + '44'};
   }
 `;
 

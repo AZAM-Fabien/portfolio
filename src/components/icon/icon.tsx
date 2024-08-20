@@ -1,14 +1,18 @@
 import * as S from "./icon_style";
 
 interface IconProps {
-  src: string;
+  href: string;
   alt: string;
   width?: string;
   height?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ src, alt, width, height }) => {
-  return <S.Icon src={src} alt={alt} width={width} height={height} />;
+const Icon: React.FC<IconProps> = ({ href, alt, width, height }) => {
+  return (
+    <S.Svg role="img" aria-label={alt} width={width} height={height}>
+      <use href={href} />
+    </S.Svg>
+  );
 };
 
 export default Icon;
