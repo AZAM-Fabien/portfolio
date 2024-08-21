@@ -85,12 +85,14 @@ const Slider: React.FC = () => {
             transition={{ duration: 0.5 }}
           ></S.Item>
         ))}
+        <S.NextImage onClick={handleNext}></S.NextImage>
+        <S.PreviousImage onClick={handleBack}></S.PreviousImage>
       </S.Box>
       <S.ButtonContainer>
-        <S.Button onClick={handleBack}>Back</S.Button>
+        <S.Button className="previous" onClick={handleBack}>Previous</S.Button>
         <S.Button onClick={handleLive}>live</S.Button>
         <S.Button onClick={handleGit}>GitHub</S.Button>
-        <S.Button onClick={handleNext}>Next</S.Button>
+        <S.Button className="next" onClick={handleNext}>Next</S.Button>
       </S.ButtonContainer>
     </>
   );

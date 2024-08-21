@@ -10,6 +10,10 @@ export const Box = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 1079px) {
+    max-width: 450px;
+  }
+
   @media (max-width: 680px) {
     overflow: hidden;
     width: 100%;
@@ -33,6 +37,28 @@ export const Item = styled(motion.div)<{ img: string }>`
     aspect-ratio: 3/2;
     width: 100%;
     height: auto;
+  }
+`;
+
+export const NextImage = styled(Box)`
+  position: absolute;
+  right: -68%;
+  transform: scaleY(0.7) scaleX(0.35);
+  z-index: 10000;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const PreviousImage = styled(Box)`
+  position: absolute;
+  left: -68%;
+  transform: scaleY(0.7) scaleX(0.35);
+  z-index: 10000;
+
+  &:hover {
+    cursor: pointer;
   }
 `;
 
@@ -64,4 +90,20 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.textDark};
   border: none;
   border-radius: 5px;
+  width: 64px;
+
+  &.next,
+  &.previous {
+    width: 72px;
+    display:none;
+
+    @media (max-width: 680px) {
+      display: block;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: ${({ theme }) => theme.activeItemDark};
+  }
 `;
