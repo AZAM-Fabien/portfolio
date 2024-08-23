@@ -84,15 +84,7 @@ const CVWord: React.FC = () => {
                 <S.TextShrinkH2>Profil personnel</S.TextShrinkH2>
                 <S.ContainerInside>
                   <S.TextShrinkH3>
-                    Développeur front-end passionné avec une formation
-                    d'ingénieur biomédicale, je suis à la recherche
-                    d'opportunités en tant que freelance, privilégiant le
-                    télétravail ou la région parisienne. Ma formation m'a
-                    inculqué une rigueur scientifique, une capacité à résoudre
-                    des problèmes complexes et une attention minutieuse aux
-                    détails, des atouts que j'applique dans le développement
-                    web. Ouvert à des projets en français ou en anglais. Je
-                    reste réceptif à toute offre de CDD ou CDI.
+                    Développeur front-end dynamique avec une double formation en ingénierie biomédicale et développement web, je recherche des missions en freelance, privilégiant le télétravail ou la région parisienne. Rigoureux, ambitieux, et passionné par la résolution de problèmes complexes et l'apprentissage continue, j'applique ces qualités dans la création de solutions web innovantes. Ouvert à des projets en français ou en anglais, je suis également réceptif à des offres en CDD ou CDI.
                   </S.TextShrinkH3>
                 </S.ContainerInside>
               </S.ContainerProfile>

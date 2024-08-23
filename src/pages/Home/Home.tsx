@@ -60,9 +60,7 @@ function Home() {
         <S.PostIt>
           <S.TextPostIt>
             {" "}
-            Azam Fabien, Développeur front-end passionné avec une formation
-            d'ingénieur biomédicale, je suis à la recherche d'opportunités en
-            tant que freelance, privilégiant le <br/> télétravail
+            Azam Fabien,  Développeur front-end avec une double formation en ingénierie biomédicale et développement web, je recherche des missions en freelance restant ouvert au CDI, <br/> privilégiant le <br/>télétravail
           </S.TextPostIt>
           <S.ImagePostIt src={`wallpaper/PostIt.webp`} alt="Post-It" />
         </S.PostIt>

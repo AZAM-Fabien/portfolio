@@ -32,7 +32,7 @@ export const TextPostIt = styled.h1`
   font-size: 24px;
 
   @media (max-width: 1079px) {
-    font-size: 16px;
+    font-size: 14px;
     top: 50px;
     right: 64px;
     width: 174px;
