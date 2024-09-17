@@ -37,8 +37,6 @@ export const TextPostIt = styled.h1`
     right: 64px;
     width: 174px;
   }
-
-  @media (max-width: 680px) {
 `;
 
 export const ImagePostIt = styled.img`

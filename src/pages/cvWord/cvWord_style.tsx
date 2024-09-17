@@ -35,7 +35,7 @@ export const CVMain = styled.div`
     padding: 30px;
     height: auto;
   }
-
+  }
 `;
 
 const Column = styled.div`
