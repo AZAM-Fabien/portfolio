@@ -84,7 +84,7 @@ const CVWord: React.FC = () => {
                 <S.TextShrinkH2>Profil personnel</S.TextShrinkH2>
                 <S.ContainerInside>
                   <S.TextShrinkH3>
-                    Développeur front-end dynamique avec une double formation en ingénierie biomédicale et développement web, je recherche des missions en freelance, privilégiant le télétravail ou la région parisienne. Rigoureux, ambitieux, et passionné par la résolution de problèmes complexes et l'apprentissage continue, j'applique ces qualités dans la création de solutions web innovantes. Ouvert à des projets en français ou en anglais, je suis également réceptif à des offres en CDD ou CDI.
+                    Développeur front-end spécialisé en React et TypeScript, avec une formation en ingénierie biomédical et développement web. Je recherche des missions freelance, privilégiant le télétravail ou la région parisienne. Passionné par les défis complexes, j'aime analyser les besoins pour créer des solutions web performantes et intuitives. Rigoureux et motivé, je suis prêt à apporter mes compétences à des projets variés en français ou en anglais. Ouvert également à des opportunités en CDD ou CDI.
                   </S.TextShrinkH3>
                 </S.ContainerInside>
               </S.ContainerProfile>

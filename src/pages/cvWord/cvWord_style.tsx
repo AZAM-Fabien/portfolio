@@ -15,22 +15,25 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
 `;
 
 export const CVMain = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+  padding: 0px 30px;
   margin: auto;
-  padding: 30px;
+  height: 100%;
+
 
   @media (max-width: 1439px) {
     gap: 20px;
-  }
+  
 
   @media (max-width: 1079px) {
     flex-direction: column;
+    padding: 30px;
+    height: auto;
   }
 
 `;
@@ -218,6 +221,7 @@ export const ContainerColumn = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+  height: 100%;
 
   @media (max-width: 1439px) {
     gap: 20px;
@@ -232,6 +236,7 @@ export const ContainerColumn = styled.div`
 
 export const Column2 = styled(Column)`
   max-width: 500px;
+  height: 80%;
 
   @media (max-width: 680px) {
     width: 100%;
@@ -243,6 +248,7 @@ const ContainerCV = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
   width: 100%;
   gap: 20px;
   background-color: ${({ theme }) => theme.backgroundLight};
@@ -296,6 +302,7 @@ export const TextShrinkH4 = styled(TextH4)`
 
 export const Column3 = styled(Column)`
   max-width: 500px;
+  height: 80%;
 
   @media (max-width: 680px) {
     width: 100%;
