@@ -8,7 +8,28 @@ import Icon from "../icon/icon";
 import Bubble from "../bubble/bubble";
 import { toggleChrome, toggleSettings, toggleCVWord } from "../../redux/openSlice";
 
+
+
+
+
+
 const Menu: React.FC = () => {
+
+
+  let color = "#004074";
+
+  const theme = useSelector((state: RootState) => state.theme.currentTheme);
+
+  if (theme.background === "#0D1520" || theme.background === "#FBFDFF") {
+      color = "#004074";
+  }
+  if (theme.background === "#191111" || theme.background === "#FFFCFC") {
+      color = "#611623";
+  }
+  if (theme.background === "#111111" || theme.background === "#FCFCFC") {
+      color = "#313131";
+  }
+
   const dispatch = useDispatch();
   const activeIcon = useSelector((state: RootState) => state.icon.activeIcon);
 
@@ -59,7 +80,7 @@ const Menu: React.FC = () => {
   }, [activeIcon, dispatch]);
 
   return (
-    <S.Menu>
+    <S.Menu color={color}>
       <S.Ul>
         {["settings", "chrome", "word"].map((icon) => (
           <S.Li key={icon} onClick={() => handleIconClick(icon)}>

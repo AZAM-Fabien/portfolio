@@ -1,6 +1,8 @@
 // src/components/bubble/Bubble.tsx
 import React, { useEffect, useRef } from "react";
 import * as S from "./bubble_style";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 interface BubbleProps {
   activeIcon: string;
@@ -8,6 +10,19 @@ interface BubbleProps {
 
 const Bubble: React.FC<BubbleProps> = ({ activeIcon }) => {
   const bubbleRef = useRef<HTMLDivElement>(null);
+  let color = "#0D1520";
+
+  const theme = useSelector((state: RootState) => state.theme.currentTheme);
+
+  if (theme.background === "#0D1520" || theme.background === "#FBFDFF") {
+      color = "#0D1520";
+  }
+  if (theme.background === "#191111" || theme.background === "#FFFCFC") {
+      color = "#191111";
+  }
+  if (theme.background === "#111111" || theme.background === "#FCFCFC") {
+      color = "#111111";
+  }
 
   useEffect(() => {
     const iconPositions = {
@@ -24,7 +39,7 @@ const Bubble: React.FC<BubbleProps> = ({ activeIcon }) => {
     }
   }, [activeIcon]);
 
-  return <S.Bubble ref={bubbleRef} />;
+  return <S.Bubble ref={bubbleRef} color={color}/>;
 };
 
 export default Bubble;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Chrome = styled.div`
   position: absolute;
-  background-color: ${({ theme }) => theme.backgroundLight2};
+  background-color: ${({ theme }) => theme.background2};
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -14,12 +14,12 @@ export const TextH2 = styled.h2`
   margin: 0;
   font-size: 36px;
   line-height: 36px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const TextH3 = styled.h3`
   font-size: 14px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const MainContainer = styled.div`
@@ -27,7 +27,7 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
+  overflow-x: hidden;
 `;
 
 export const ChromeContainer = styled.div`
@@ -80,7 +80,7 @@ export const PictureWrapper = styled.div`
     background: radial-gradient(
       ellipse,
       rgba(255, 255, 255, 0) 70%,
-      ${({ theme }) => theme.backgroundLight2} 100%
+      ${({ theme }) => theme.background2} 100%
     );
     filter: blur(10px);
   }
@@ -122,6 +122,11 @@ export const Story = styled.div`
     font-size: 12px;
     width: 100%;
   }
+`;
+
+export const Textp = styled.p`
+  margin: 0;
+  color: ${({ theme }) => theme.text};
 `;
 
 export const Story2 = styled(Story)`

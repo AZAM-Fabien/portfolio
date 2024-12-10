@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-
 export const CVWord = styled.div`
   position: absolute;
-  background-color: ${({ theme }) => theme.backgroundLight2};
+  background-color: ${({ theme }) => theme.background2};
   width: 100%;
   height: 100%;
   overflow: auto;
-  z-index: 1000;
+  z-index: 10;
 `;
 
 export const MainContainer = styled.div`
@@ -15,6 +14,7 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 `;
 
 export const CVMain = styled.div`
@@ -23,18 +23,15 @@ export const CVMain = styled.div`
   gap: 30px;
   padding: 0px 30px;
   margin: auto;
-  height: 100%;
-
 
   @media (max-width: 1439px) {
     gap: 20px;
-  
 
-  @media (max-width: 1079px) {
-    flex-direction: column;
-    padding: 30px;
-    height: auto;
-  }
+    @media (max-width: 1079px) {
+      flex-direction: column;
+      padding: 30px;
+      gap: 30px;
+    }
   }
 `;
 
@@ -44,7 +41,6 @@ const Column = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 100%;
   gap: 30px;
 
   @media (max-width: 1439px) {
@@ -59,7 +55,7 @@ export const Column1 = styled(Column)`
 
   @media (max-width: 1079px) {
     flex-direction: row;
-    width : 100%;
+    width: 100%;
   }
 
   @media (max-width: 680px) {
@@ -91,7 +87,7 @@ export const Picture = styled.img`
 `;
 
 export const NamePositionContainer = styled.div`
-  background-color: ${({ theme }) => theme.activeItemLight};
+  background-color: ${({ theme }) => theme.activeItem};
   width: 100%;
   height: 190px;
   display: flex;
@@ -102,7 +98,6 @@ export const NamePositionContainer = styled.div`
   gap: 10px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
   padding-bottom: 10px;
-  
 `;
 
 export const Name = styled.address`
@@ -110,13 +105,13 @@ export const Name = styled.address`
 `;
 export const NameH2 = styled.h2`
   font-size: 24px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
   margin: 0;
 `;
 
 export const PositionH2 = styled.h2`
   font-size: 24px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
   margin: 0;
 `;
 
@@ -136,7 +131,7 @@ export const TextH2 = styled.h2`
   margin: 0;
   font-size: 36px;
   line-height: 36px;
-  color: ${({ theme }) => theme.activeItemLight};
+  color: ${({ theme }) => theme.activeItem};
 
   @media (max-width: 1439px) {
     font-size: 24px;
@@ -146,7 +141,7 @@ export const TextH2 = styled.h2`
 
 export const TextH3 = styled.h3`
   font-size: 21px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
   margin: 0;
 
   @media (max-width: 1439px) {
@@ -156,7 +151,7 @@ export const TextH3 = styled.h3`
 
 export const TextH4 = styled.h4`
   font-size: 16px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
   margin: 0;
   margin-left: 8px;
 
@@ -181,16 +176,17 @@ export const Email = ListItem;
 
 export const EmailTo = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
 
   &:hover {
     cursor: pointer;
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    color: ${({ theme }) => theme.activeItemLight};
+    color: ${({ theme }) => theme.activeItem};
 
-    &:hover > h3,h4 {
-      color: ${({ theme }) => theme.activeItemLight};
+    &:hover > h3,
+    h4 {
+      color: ${({ theme }) => theme.activeItem};
     }
   }
 `;
@@ -199,16 +195,17 @@ export const LinkedIn = ListItem;
 
 export const LinkedInLink = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.textLight}; 
+  color: ${({ theme }) => theme.text};
 
   &:hover {
     cursor: pointer;
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    color: ${({ theme }) => theme.activeItemLight};
+    color: ${({ theme }) => theme.activeItem};
 
-    &:hover > h3,h4 {
-      color: ${({ theme }) => theme.activeItemLight};
+    &:hover > h3,
+    h4 {
+      color: ${({ theme }) => theme.activeItem};
     }
   }
 `;
@@ -221,6 +218,7 @@ export const ContainerColumn = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+  align-items: stretch;
   height: 100%;
 
   @media (max-width: 1439px) {
@@ -235,8 +233,7 @@ export const ContainerColumn = styled.div`
 // *********Column 2***********
 
 export const Column2 = styled(Column)`
-  max-width: 500px;
-  height: 80%;
+max-width: 500px;
 
   @media (max-width: 680px) {
     width: 100%;
@@ -251,7 +248,7 @@ const ContainerCV = styled.div`
   flex-grow: 1;
   width: 100%;
   gap: 20px;
-  background-color: ${({ theme }) => theme.backgroundLight};
+  background-color: ${({ theme }) => theme.background};
   border-radius: 20px;
   padding: 20px 0;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
@@ -302,7 +299,6 @@ export const TextShrinkH4 = styled(TextH4)`
 
 export const Column3 = styled(Column)`
   max-width: 500px;
-  height: 80%;
 
   @media (max-width: 680px) {
     width: 100%;

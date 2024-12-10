@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div <{ color: string }>`
   position: relative;
   height: calc(100% - (40px + min(7vw, 33px)));
   width: 100%;
-  background-color: ${({ theme }) => theme.backgroundDark};
+  background-color: ${(props) => props.color};
   display: flex;
   justify-content: center;
 `;
@@ -21,12 +21,12 @@ export const PostIt = styled.div`
   }
 `;
 
-export const TextPostIt = styled.h1`
+export const TextPostIt = styled.h1 <{ color: string }>`
   position: absolute;
   top: 86px;
   right: 86px;
   width: 300px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${(props) => props.color};
   margin: 0;
   padding: 0;
   font-size: 24px;
@@ -47,7 +47,6 @@ export const ImagePostIt = styled.img`
   @media (max-width: 1079px) {
     width: 300px;
   }
-  
 `;
 
 export const Image = styled.img`

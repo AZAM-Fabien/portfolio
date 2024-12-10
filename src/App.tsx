@@ -12,7 +12,7 @@ const App: React.FC = () => {
     (state: RootState) => state.theme.currentTheme
   );
   return (
-    <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={currentTheme }>
       <Header />
       <Footer />
       <Home />

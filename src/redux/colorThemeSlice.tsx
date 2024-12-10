@@ -1,20 +1,19 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { blueTheme } from "../theme/theme";
+import { blueThemeLight } from "../theme/theme";
 
 interface ThemeState {
-  currentTheme: typeof blueTheme
-  ;
+  currentTheme: typeof blueThemeLight;
 }
 
 const initialState: ThemeState = {
-  currentTheme: blueTheme, // Par défaut, on peut choisir un thème initial
+  currentTheme: blueThemeLight, // Par défaut, on peut choisir un thème initial
 };
 
 const themeSlice = createSlice({
   name: "theme",
   initialState,
   reducers: {
-    setTheme: (state, action: PayloadAction<typeof blueTheme>) => {
+    setTheme: (state, action: PayloadAction<typeof blueThemeLight>) => {
       state.currentTheme = action.payload;
     },
   },

@@ -4,9 +4,9 @@ export const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.textLight};
+  border: 1px solid ${({ theme }) => theme.text};
   height: 20px;
-  background-color: ${({ theme }) => theme.activeItemLight};
+  background-color: ${({ theme }) => theme.activeItem};
 `;
 
 export const TextH2 = styled.h2`
@@ -14,7 +14,7 @@ export const TextH2 = styled.h2`
   margin-left: 1rem;
   font-size: 16px;
   line-height: 20px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const TextH3 = styled(TextH2)`
@@ -22,13 +22,13 @@ export const TextH3 = styled(TextH2)`
 `;
 
 export const CloseButton = styled.button`
-  color: ${({ theme }) => theme.textLight};
-  background-color: ${({ theme }) => theme.itemLight};
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.item};
   border: none;
   height: 100%;
 
   &:hover {
     cursor: pointer;
-    background-color: ${({ theme }) => theme.itemLight2};
+    background-color: ${({ theme }) => theme.item2};
   }
 `;

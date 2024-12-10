@@ -26,7 +26,13 @@ const CVWord: React.FC = () => {
   };
 
   return (
-    <S.CVWord role="dialog" aria-modal="true" ref={CVRef} tabIndex={0} onKeyDown={handleKeyDown}>
+    <S.CVWord
+      role="dialog"
+      aria-modal="true"
+      ref={CVRef}
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+    >
       <TopContainer title="CV PDF" onClick={handleCloseCV} />
       <S.MainContainer>
         <S.CVMain>
@@ -34,7 +40,7 @@ const CVWord: React.FC = () => {
 
           <S.Column1>
             <S.PresentationFrame>
-              <S.Picture alt ="photo de Fabien" src="Portfolio/Myself.webp" />
+              <S.Picture alt="photo de Fabien" src="Portfolio/Myself.webp" />
               <S.NamePositionContainer>
                 <S.Name>
                   <S.NameH2>AZAM Fabien</S.NameH2>
@@ -84,7 +90,12 @@ const CVWord: React.FC = () => {
                 <S.TextShrinkH2>Profil personnel</S.TextShrinkH2>
                 <S.ContainerInside>
                   <S.TextShrinkH3>
-                    Développeur front-end spécialisé en React et TypeScript, avec une formation en ingénierie biomédical et développement web. Je recherche des missions freelance, privilégiant le télétravail ou la région parisienne. Passionné par les défis complexes, j'aime analyser les besoins pour créer des solutions web performantes et intuitives. Rigoureux et motivé, je suis prêt à apporter mes compétences à des projets variés en français ou en anglais. Ouvert également à des opportunités en CDD ou CDI.
+                    Développeur front-end spécialisé en React et TypeScript,
+                    avec un Master en ingénierie biomédical et equivalent bac+2 en développement
+                    web.  Passionné par les défis complexes, j'aime analyser les besoins pour créer des
+                    solutions web performantes et intuitives. Rigoureux et
+                    motivé, je suis prêt à apporter mes compétences à des
+                    projets variés en français ou en anglais. 
                   </S.TextShrinkH3>
                 </S.ContainerInside>
               </S.ContainerProfile>
@@ -138,7 +149,7 @@ const CVWord: React.FC = () => {
                   </S.TextShrinkH3>
                   <S.TextShrinkH3>
                     • SEO : Optimisation pour les moteurs de recherche, audit
-                    SEO (Wave Lighthouse).
+                    SEO (Wave house).
                   </S.TextShrinkH3>
                   <S.TextShrinkH3>
                     • Recherche sur publication / veille informationnelle.

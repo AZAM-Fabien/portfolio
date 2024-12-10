@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ScreenDisplay = styled.footer`
   position: absolute;
+  z-index: 8;
   bottom: 0;
   width: 100%;
   height: min(7vw, 33px);

@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Settings = styled.div`
   position: absolute;
-  background-color: ${({ theme }) => theme.backgroundLight2};
+  background-color: ${({ theme }) => theme.background2};
   width: 100%;
   height: 100%;
   overflow: auto;
-  z-index: 1000;
+  z-index: 10;
 `;
 
 export const TextH2 = styled.h2`
@@ -14,7 +14,15 @@ export const TextH2 = styled.h2`
   text-align: center;
   margin: 0;
   font-size: 34px;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
+`;
+
+export const TextH3 = styled.h3`
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 34px;
+  color: ${({ theme }) => theme.text};
 `;
 
 export const MainContainer = styled.div`
@@ -22,7 +30,7 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
+  overflow-x: hidden;
 `;
 
 export const Container = styled.div`
@@ -38,6 +46,17 @@ export const ColorsMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2vw;
+`;
+
+export const ChooseTheme = styled.div`
+  position: relative;
+  right: -50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2vw;
 `;
 

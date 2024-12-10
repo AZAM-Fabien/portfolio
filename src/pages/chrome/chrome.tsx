@@ -37,12 +37,11 @@ const Chrome: React.FC = () => {
               <S.PictureBlur alt="effet de flou" aria-hidden="true" src="Portfolio/Myself.webp" />
             </S.PictureWrapper>
             <S.Story>
-              <p>
+              <S.Textp>
                 {" "}
-                Je suis Fabien Azam, jeune développeur front-end passionné.
-                Titulaire d'un master en ingénierie biomédicale et ayant
-                effectué un stage de recherche en analyse de données médicales
-                par machine learning, j'ai acquis une rigueur d'ingénieur qui me
+                Je suis Fabien Azam, jeune développeur front-end passionné en reconversion.
+                Titulaire d'un master en ingénierie biomédicale et d'un equivalent bac+2 en
+                devellopement web, j'ai acquis une rigueur d'ingénieur qui me
                 pousse à toujours aller plus loin dans mes idées, projets et
                 connaissances ainsi qu'a surmonter les difficultés qui
                 deviennent des challenges. Mon objectif est de maîtriser les
@@ -50,14 +49,15 @@ const Chrome: React.FC = () => {
                 perfectionner en HTML, CSS, SCSS, JS, React et TypeScript. Je
                 m'intéresse particulièrement au développement créatif, notamment
                 aux animations et transitions complexes que je souhaite
-                apprendre.{" "}
-              </p>
+                apprendre. Je souhaite également apprendre le back-end afin de pouvoir réaliser
+                 l'entièreté de mes projets.{" "}
+              </S.Textp>
             </S.Story>
           </S.Container>
           <S.Container2>
             <S.TextH2>Projets</S.TextH2>
             <S.Story2>
-              <p> voici quelques projets sur lesquels j'ai pu travailler. </p>
+              <S.Textp> voici quelques projets sur lesquels j'ai pu travailler. </S.Textp>
             </S.Story2>
             <S.ContainerSlider>
               <Slider />

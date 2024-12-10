@@ -44,7 +44,7 @@ export const NextImage = styled(Box)`
   position: absolute;
   right: -68%;
   transform: scaleY(0.7) scaleX(0.35);
-  z-index: 10000;
+  z-index: 11;
 
   &:hover {
     cursor: pointer;
@@ -55,7 +55,7 @@ export const PreviousImage = styled(Box)`
   position: absolute;
   left: -68%;
   transform: scaleY(0.7) scaleX(0.35);
-  z-index: 10000;
+  z-index: 11;
 
   &:hover {
     cursor: pointer;
@@ -66,9 +66,9 @@ export const Text = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.text};
   font-size: 2em;
-  text-shadow: 0 5px 15px ${({ theme }) => theme.itemLight2};
+  text-shadow: 0 5px 15px ${({ theme }) => theme.item2};
 
   &:hover {
     cursor: pointer;
@@ -86,8 +86,8 @@ export const ButtonContainer = styled.div`
 
 export const Button = styled.button`
   padding: 10px;
-  background: ${({ theme }) => theme.itemDark};
-  color: ${({ theme }) => theme.textDark};
+  background: ${({ theme }) => theme.item2};
+  color: ${({ theme }) => theme.text};
   border: none;
   border-radius: 5px;
   width: 64px;
@@ -95,7 +95,7 @@ export const Button = styled.button`
   &.next,
   &.previous {
     width: 72px;
-    display:none;
+    display: none;
 
     @media (max-width: 680px) {
       display: block;
@@ -104,6 +104,6 @@ export const Button = styled.button`
 
   &:hover {
     cursor: pointer;
-    background: ${({ theme }) => theme.activeItemDark};
+    background: ${({ theme }) => theme.activeItem};
   }
 `;

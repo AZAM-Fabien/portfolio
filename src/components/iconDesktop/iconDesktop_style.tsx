@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const IconDesktop = styled.div`
+export const IconDesktop = styled.div<{ color: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ export const IconDesktop = styled.div`
   height: fit-content;
   padding: 4px;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.backgroundDark + "44"};
+  background-color: ${( props ) => props.color + "44"};
 
   ${({ className }) =>
     className === "bootstrap" &&
@@ -23,8 +23,8 @@ export const IconDesktop = styled.div`
   }
 `;
 
-export const Text = styled.h2`
+export const Text = styled.h2 <{ color: string; $owncolor: string }>`
   font-size: 12px;
   margin: 0;
-  color: ${({ color, theme }) => (color ? theme.textLight : theme.textDark)};
+  color: ${({ $owncolor, theme, color }) => ($owncolor == "true" ? theme.text : color)};
 `;

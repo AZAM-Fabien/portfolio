@@ -1,44 +1,53 @@
-export const blueTheme = {
-  backgroundDark: "#0D1520",
-  backgroundDark2: "#0D2847",
-  itemDark: "#004074",
-  activeItemDark: "#205D9E",
-  itemDark2: "#0090FF",
-  textDark: "#C2E6FF",
-  backgroundLight: "#FBFDFF",
-  backgroundLight2: " #E6F4FE",
-  itemLight: "#C2E5FF",
-  activeItemLight: "#8EC8F6",
-  itemLight2: "#0090FF",
-  textLight: "#113264",
+export const blueThemeDark = {
+  background: "#0D1520",
+  background2: "#0D2847",
+  item: "#0090FF",
+  item2: "#004074",
+  activeItem: "#205D9E",
+  text: "#C2E6FF",
 };
 
-export const redTheme = {
-  backgroundDark: "#191111",
-  backgroundDark2: "#3B1219",
-  itemDark: "#611623",
-  activeItemDark: "#8C333A",
-  itemDark2: "#E5484D",
-  textDark: "#FFD1D9",
-  backgroundLight: "#FFFCFC",
-  backgroundLight2: "#FEEBEC",
-  itemLight: "#FFCDCE",
-  activeItemLight: "#F4A9AA",
-  itemLight2: "#E5484D",
-  textLight: "#641723",
+export const blueThemeLight = {
+  background: "#FBFDFF",
+  background2: " #E6F4FE",
+  item: "#C2E5FF",
+  item2: "#0090FF",
+  activeItem: "#8EC8F6",
+  text: "#113264",
 };
 
-export const greyTheme = {
-  backgroundDark: "#111111",
-  backgroundDark2: "#222222",
-  itemDark: "#313131",
-  activeItemDark: "#484848",
-  itemDark2: "#6E6E6E",
-  textDark: "#EEEEEE",
-  backgroundLight: "#FCFCFC",
-  backgroundLight2: "#F0F0F0",
-  itemLight: "#E0E0E0",
-  activeItemLight: "#CECECE",
-  itemLight2: "#8D8D8D",
-  textLight: "#202020",
+export const redThemeDark = {
+  background: "#191111",
+  background2: "#3B1219",
+  item: "#E5484D",
+  item2: "#611623",
+  activeItem: "#8C333A",
+  text: "#FFD1D9",
+};
+
+export const redThemeLight = {
+  background: "#FFFCFC",
+  background2: "#FEEBEC",
+  item: "#FFCDCE",
+  item2: "#E5484D",
+  activeItem: "#F4A9AA",
+  text: "#641723",
+}
+
+export const greyThemeDark = {
+  background: "#111111",
+  background2: "#222222",
+  item: "#6E6E6E",
+  item2: "#313131",
+  activeItem: "#484848",
+  text: "#EEEEEE",
+};
+
+export const greyThemeLight = {
+  background: "#FCFCFC",
+  background2: "#F0F0F0",
+  item: "#E0E0E0",
+  item2: "#8D8D8D",
+  activeItem: "#CECECE",
+  text: "#202020",
 };

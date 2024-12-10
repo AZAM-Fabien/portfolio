@@ -1,25 +1,31 @@
 import * as S from "./colorsBox_style";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../../redux/colorThemeSlice";
-import { blueTheme, greyTheme, redTheme } from "../../theme/theme";
+import { RootState } from "../../redux/store";
+import { blueThemeDark, blueThemeLight, greyThemeDark, greyThemeLight, redThemeDark, redThemeLight } from "../../theme/theme";
 
 
 interface ColorProps {
     color: string;
     color2: string;
   }
-
 const ColorsBox: React.FC<ColorProps> = ({ color, color2}) => {
 
     const dispatch = useDispatch();
 
+    const sliderTheme  = useSelector((state: RootState) => state.slider.sliderTheme);
+
+    const blueThemes = sliderTheme ? blueThemeLight : blueThemeDark;
+    const greyThemes = sliderTheme ? greyThemeLight : greyThemeDark;
+    const redThemes = sliderTheme ? redThemeLight : redThemeDark;
+
     const handleClick = () => {
-        if (color === blueTheme.itemLight2) {
-            dispatch(setTheme(blueTheme));
-        } else if (color === greyTheme.itemLight2) {
-            dispatch(setTheme(greyTheme));
-        } else if (color === redTheme.itemLight2) {
-            dispatch(setTheme(redTheme));
+        if (color === blueThemeLight.item2) {
+            dispatch(setTheme(blueThemes));
+        } else if (color === greyThemeLight.item2) {
+            dispatch(setTheme(greyThemes));
+        } else if (color === redThemeLight.item2) {
+            dispatch(setTheme(redThemes));
         }
     };
 

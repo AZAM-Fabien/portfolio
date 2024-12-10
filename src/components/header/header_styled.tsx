@@ -6,13 +6,13 @@ export const Container = styled.header`
   width: 100%;
 `;
 
-export const ContainerMenu = styled.div`
+export const ContainerMenu = styled.div<{ color: string }>`
+  position: relative;
+  z-index: 8;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.backgroundDark2};
+  background-color: ${(props) => props.color};
   height: 40px;
-
-  
 `;

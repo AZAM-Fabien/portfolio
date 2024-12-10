@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const WeatherContainer = styled.div`
+export const WeatherContainer = styled.div <{ color: string }>`
   position: absolute;
-  z-index: 10;
+  z-index: 9;
   bottom: calc(15px + min(4vw, 20px));
   margin-left: 20px;
 
@@ -11,12 +11,12 @@ export const WeatherContainer = styled.div`
     bottom: unset;
     padding: 4px;
     border-radius: 8px;
-    background-color: ${({ theme }) => theme.backgroundDark + '44'};
+    background-color: ${(props) => props.color + "44"};
   }
 `;
 
-export const Text = styled.p`
+export const Text = styled.p <{ color: string }>`
   margin: 0;
   font-size: 14px;
-  color: ${({ theme }) => theme.textDark};
+  color:  ${(props) => props.color};
 `;

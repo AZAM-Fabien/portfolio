@@ -1,7 +1,8 @@
 import * as S from "./iconDesktop_style";
 import Icon from "../icon/icon";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setActiveIcon } from "../../redux/iconSlice";
+import { RootState } from "../../redux/store";
 
 type IconDesktopProps = {
   href: string;
@@ -26,9 +27,29 @@ const IconDesktop: React.FC<IconDesktopProps> = ({
     dispatch(setActiveIcon(iconDesktop));
   };
 
+
+  let colorIcon = "#0D1520";
+  let color= "#C2E6FF"
+
+  const theme = useSelector((state: RootState) => state.theme.currentTheme);
+
+  if (theme.background === "#0D1520" || theme.background === "#FBFDFF") {
+      colorIcon = "#0D1520";
+      color= "#C2E6FF";
+  }
+  if (theme.background === "#191111" || theme.background === "#FFFCFC") {
+      colorIcon = "#191111";
+      color= "#FFD1D9";
+  }
+  if (theme.background === "#111111" || theme.background === "#FCFCFC") {
+      colorIcon = "#111111";
+      color= "#EEEEEE";
+  }
+
   return (
     <S.IconDesktop
       className={iconClass}
+      color={colorIcon}
       onClick={() => handleIconDesktopClick(iconHref)}
     >
       <Icon
@@ -37,7 +58,7 @@ const IconDesktop: React.FC<IconDesktopProps> = ({
         width={widthIcon}
         height={heightIcon}
       />
-      <S.Text color={textColor ? `${textColor}` : undefined}>
+      <S.Text color={color} $owncolor={textColor ? "true" : "false"}>
         {" "}
         {iconText}
       </S.Text>

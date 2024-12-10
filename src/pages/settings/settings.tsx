@@ -1,12 +1,13 @@
 import * as S from "./settings_style";
 import { useDispatch } from "react-redux";
 import ColorsBox from "../../components/colorsBox/colorsBox";
-import { blueTheme, greyTheme, redTheme } from "../../theme/theme";
+import { blueThemeDark, blueThemeLight, greyThemeDark, greyThemeLight, redThemeDark, redThemeLight } from "../../theme/theme";
 import ImageBox from "../../components/imageBox/imageBox";
 import { setActiveImage } from "../../redux/homeSlice";
 import TopContainer from "../../components/topContainer/topContainer";
 import { resetActiveIcon } from "../../redux/iconSlice";
 import React, { useEffect, useRef } from "react";
+import SliderTheme from "../../components/sliderTheme/sliderTheme";
 
 const Settings: React.FC = () => {
   const settingsRef = useRef<HTMLDivElement>(null);
@@ -15,12 +16,12 @@ const Settings: React.FC = () => {
     settingsRef.current?.focus();
   }, []);
 
-  const blue = blueTheme.itemLight2;
-  const blue2 = blueTheme.itemDark;
-  const red = redTheme.itemLight2;
-  const red2 = redTheme.itemDark;
-  const grey = greyTheme.itemLight2;
-  const grey2 = greyTheme.itemDark;
+  const blue = blueThemeLight.item2;
+  const blue2 = blueThemeDark.item2;
+  const red = redThemeLight.item2;
+  const red2 = redThemeDark.item2;
+  const grey = greyThemeLight.item2;
+  const grey2 = greyThemeDark.item2;
   const dispatch = useDispatch();
 
   const handleClick = (src: string) => {
@@ -39,12 +40,23 @@ const Settings: React.FC = () => {
   };
 
   return (
-    <S.Settings role="dialog" aria-modal="true"ref={settingsRef} onKeyDown={handleKeyDown} tabIndex={0}>
+    <S.Settings
+      role="dialog"
+      aria-modal="true"
+      ref={settingsRef}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+    >
       <TopContainer title="Paramètre" onClick={handleCloseSettings} />
       <S.MainContainer>
         <S.Container>
           <S.ColorsMenu>
-            <S.TextH2>Theme et couleurs</S.TextH2>
+            <S.TextH2>Themes et couleurs</S.TextH2>
+            <S.ChooseTheme>
+              <S.TextH3>test</S.TextH3>
+              <SliderTheme />
+            </S.ChooseTheme>
+
             <S.ColorsContainer>
               <ColorsBox color={blue} color2={blue2} />
               <ColorsBox color={red} color2={red2} />
@@ -52,7 +64,7 @@ const Settings: React.FC = () => {
             </S.ColorsContainer>
           </S.ColorsMenu>
           <S.ImageMenu>
-            <S.TextH2>Image</S.TextH2>
+            <S.TextH2>Images</S.TextH2>
             <S.ImageMainContainer>
               <S.ImageContainer1>
                 {[

@@ -5,7 +5,7 @@ export const Menu = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.itemDark};
+  background-color: ${(props) => props.color};
   width: 220px;
   height: 90%;
   border-radius: 10px;
