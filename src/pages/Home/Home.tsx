@@ -132,7 +132,7 @@ function Home() {
             { src: "github", text: "github" },
             { src: "settings", text: "settings" },
             { src: "word", text: " CV.PDF" },
-            { src: "chrome", text: "chrome" },
+            { src: "chrome", text: "chrome (Portfolio)" },
             { src: "tictactoe", text: "tictactoe" },
             { src: "sutom", text: "sutom" },
           ].map(({ src, text }, index) => (

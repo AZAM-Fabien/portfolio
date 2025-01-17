@@ -9,7 +9,7 @@ const Weather: React.FC = () => {
   const [weather, setWeather] = useState<string>('Obtention données météorologiques...');
   const [city, setCity] = useState<string>('Obtention de la ville...');
 
-  const apiKey = '83770f05d6403271940300c3b850da1e'; // Remplacez par votre clé API
+  const apiKey = '83770f05d6403271940300c3b850da1e';
 
   const fetchWeather = async (lat: number, lon: number) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=fr&appid=${apiKey}`;

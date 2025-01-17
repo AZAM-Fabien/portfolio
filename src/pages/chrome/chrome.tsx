@@ -26,7 +26,13 @@ const Chrome: React.FC = () => {
   };
 
   return (
-    <S.Chrome role="dialog" aria-modal="true" ref={chromeRef} tabIndex={0} onKeyDown={handleKeyDown}>
+    <S.Chrome
+      role="dialog"
+      aria-modal="true"
+      ref={chromeRef}
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+    >
       <TopContainer title="Chrome" onClick={handleCloseChrome} />
       <S.MainContainer>
         <S.ChromeContainer>
@@ -34,30 +40,38 @@ const Chrome: React.FC = () => {
           <S.Container>
             <S.PictureWrapper>
               <S.Picture alt="photo de Fabien" src="Portfolio/Myself.webp" />
-              <S.PictureBlur alt="effet de flou" aria-hidden="true" src="Portfolio/Myself.webp" />
+              <S.PictureBlur
+                alt="effet de flou"
+                aria-hidden="true"
+                src="Portfolio/Myself.webp"
+              />
             </S.PictureWrapper>
             <S.Story>
               <S.Textp>
                 {" "}
-                Je suis Fabien Azam, jeune développeur front-end passionné en reconversion.
-                Titulaire d'un master en ingénierie biomédicale et d'un equivalent bac+2 en
-                devellopement web, j'ai acquis une rigueur d'ingénieur qui me
-                pousse à toujours aller plus loin dans mes idées, projets et
-                connaissances ainsi qu'a surmonter les difficultés qui
-                deviennent des challenges. Mon objectif est de maîtriser les
-                différentes technologies front-end, en commençant par me
-                perfectionner en HTML, CSS, SCSS, JS, React et TypeScript. Je
-                m'intéresse particulièrement au développement créatif, notamment
-                aux animations et transitions complexes que je souhaite
-                apprendre. Je souhaite également apprendre le back-end afin de pouvoir réaliser
-                 l'entièreté de mes projets.{" "}
+                Bonjour, mon nom est Fabien Azam, jeune développeur front-end
+                passionné en reconversion. Titulaire d'un master en ingénierie
+                biomédicale et d'un equivalent bac+2 en devellopement web, j'ai
+                acquis une rigueur d'ingénieur qui me pousse à toujours aller
+                plus loin dans mes idées, projets et connaissances ainsi qu'a
+                surmonter les difficultés qui deviennent des challenges. Mon
+                objectif est de maîtriser les différentes technologies
+                front-end, en commençant par me perfectionner en HTML, CSS,
+                SCSS, JS, React et TypeScript. Je m'intéresse particulièrement
+                au développement créatif, notamment aux animations et
+                transitions complexes que je souhaite apprendre. Je souhaite
+                également maitriser le back-end afin de pouvoir réaliser
+                l'entièreté de mes projets.{" "}
               </S.Textp>
             </S.Story>
           </S.Container>
           <S.Container2>
             <S.TextH2>Projets</S.TextH2>
             <S.Story2>
-              <S.Textp> voici quelques projets sur lesquels j'ai pu travailler. </S.Textp>
+              <S.Textp>
+                {" "}
+                voici quelques projets sur lesquels j'ai pu travailler.{" "}
+              </S.Textp>
             </S.Story2>
             <S.ContainerSlider>
               <Slider />
